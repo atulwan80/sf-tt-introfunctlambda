@@ -28,6 +28,10 @@ public class Student {
         return Collections.unmodifiableSet(courses);
     }
 
+    public static StudentCriterion getSmartCriterion() {
+        return s -> s.grade > 3.0;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
